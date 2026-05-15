@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelly Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #fafaf9;
+      --ink: #0a0a0a;
+      --grey: #737373;
+      --light: #a3a3a3;
+      --hair: #e5e5e5;
+      --helv: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --geist: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--grey);
+      font-family: var(--geist);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 32px 64px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      color: var(--grey);
+    }
+    .wm {
+      font-family: var(--helv);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .wm .rule {
+      width: 36px;
+      height: 1px;
+      background: var(--ink);
+      display: inline-block;
+    }
+    .wm .e { color: var(--light); }
+    .meta {
+      font-family: var(--geist);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .meta .rule {
+      width: 36px;
+      height: 1px;
+      background: var(--ink);
+      display: inline-block;
+    }
+    .meta .clock {
+      font-variant-numeric: tabular-nums;
+      color: var(--light);
+    }
+
+    .body {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 64px;
+      align-items: flex-start;
+      padding-top: 125px;
+      width: max-content;
+      margin-left: var(--left-offset, 132px);
+    }
+
+    .mark {
+      font-family: var(--helv);
+      font-weight: 500;
+      font-size: 151px;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mark .e { color: var(--light); }
+
+    .note {
+      width: 540px;
+      color: var(--grey);
+    }
+    .note p {
+      font-family: var(--geist);
+      font-size: 14.4px;
+      line-height: 1.55;
+      margin: 0 0 1.1em 0;
+      color: var(--grey);
+    }
+    .note p:last-of-type { margin-bottom: 0; }
+    .note em { font-style: italic; }
+    .note .kicker {
+      font-size: 14.85px;
+      margin-top: 1.4em;
+      color: var(--grey);
+    }
+
+    @media (max-width: 1100px) {
+      .body {
+        padding-top: 96px;
+        gap: 48px;
+      }
+      .mark { font-size: 108px; }
+    }
+    @media (max-width: 900px) {
+      .page { padding: 32px 28px 48px; }
+      .body {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 64px 0 0;
+        width: 100%;
+        margin-left: 0;
+      }
+      .mark { font-size: 96px; }
+      .note { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div class="wm"><span>K</span><span class="rule"></span><span class="e">e</span></div>
+      <div class="meta"><span>New York</span><span class="rule"></span><span class="clock" id="clock">--:--:--</span></div>
+    </header>
+
+    <section class="body">
+      <h1 class="mark">K<span class="e">e</span>lly</h1>
+
+      <div class="note">
+        <p>
+          Kelly Engineering partners with private-equity firms to bring AI into their portfolio companies. We embed directly into operations &mdash; finance, IT, supply chain &mdash; building custom AI infrastructure to help navigate the largest technological shift in a generation.
+        </p>
+        <p>
+          Engagements run four to eight weeks. No slide decks. No hidden fees. Just working AI software that the company owns.
+        </p>
+        <p>
+          Our team has shipped mission-critical infrastructure at Palantir and General Dynamics, put satellites into orbit, run robotics divisions at frontier labs, traded at top quantitative funds, and pushed ML research at MIT.
+        </p>
+        <p>
+          We&rsquo;re named after Kelly Johnson, who ran Lockheed&rsquo;s Skunk Works and built the SR-71 Blackbird with a small team of engineers in a rented circus tent. Kelly&rsquo;s 14&nbsp;Rules &mdash; <em>small teams, vicious focus,</em> and his motto to <em>be&nbsp;quick, be&nbsp;quiet, be&nbsp;on&nbsp;time</em> &mdash; underpin how we work.
+        </p>
+        <p class="kicker">
+          As Mr Johnson liked to say: <em>we keep it simple, stupid.</em>
+        </p>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var clockEl = document.getElementById('clock');
+      var page = document.querySelector('.page');
+      var top = document.querySelector('.top');
+      var wm = document.querySelector('.wm');
+      var meta = document.querySelector('.meta');
+      var body = document.querySelector('.body');
+
+      if (clockEl) {
+        var fmt = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'America/New_York',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        });
+        function tick() { clockEl.textContent = fmt.format(new Date()); }
+        tick();
+        setInterval(tick, 1000);
+      }
+
+      function syncInsets() {
+        if (!page || !top || !wm || !meta || !body) return;
+        if (window.matchMedia('(max-width: 900px)').matches) {
+          body.style.removeProperty('--left-offset');
+          return;
+        }
+        body.style.removeProperty('--left-offset');
+        var pageRect = page.getBoundingClientRect();
+        var wmRect = wm.getBoundingClientRect();
+        var metaRect = meta.getBoundingClientRect();
+        var bodyRect = body.getBoundingClientRect();
+        var logoEnd = wmRect.right;
+        var metaStart = metaRect.left;
+        var available = metaStart - logoEnd;
+        var pad = Math.max((available - bodyRect.width) / 2, 32);
+        var pageInner = pageRect.left + 32;
+        var offset = (logoEnd + pad) - pageInner;
+        body.style.setProperty('--left-offset', offset + 'px');
+      }
+
+      syncInsets();
+      window.addEventListener('resize', syncInsets);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(syncInsets);
+      }
+    })();
+  </script>
+</body>
+</html>
