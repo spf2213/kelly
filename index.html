@@ -60,15 +60,11 @@
       -webkit-font-smoothing: antialiased;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
     }
-    .wm .rule {
-      width: 36px;
-      height: 1px;
-      background: var(--ink);
-      display: inline-block;
+    .wm .e {
+      color: var(--light);
+      margin-left: 0.06em;
     }
-    .wm .e { color: var(--light); }
     .meta {
       font-family: var(--geist);
       font-weight: 400;
@@ -123,8 +119,16 @@
       margin: 0 0 1.1em 0;
       color: var(--grey);
     }
-    .note p:last-of-type { margin-bottom: 0; }
+    .note p:last-child { margin-bottom: 0; }
     .note em { font-style: italic; }
+    .note .section-head {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      margin: 1.75em 0 0.55em 0;
+    }
+    .note .section-head:first-child { margin-top: 0; }
     .note .kicker {
       font-size: 14.85px;
       margin-top: 1.4em;
@@ -134,12 +138,12 @@
       margin-top: 2.4em;
       color: var(--grey);
     }
-    .note .contact a {
+    .note a {
       color: var(--ink);
       border-bottom: 1px solid var(--hair);
       transition: border-color .15s;
     }
-    .note .contact a:hover { border-bottom-color: var(--ink); }
+    .note a:hover { border-bottom-color: var(--ink); }
 
     @media (max-width: 1100px) {
       .body {
@@ -165,7 +169,7 @@
 <body>
   <main class="page">
     <header class="top">
-      <div class="wm"><span>K</span><span class="rule"></span><span class="e">e</span></div>
+      <div class="wm"><span>K</span><span class="e">e</span></div>
       <div class="meta"><span>New York</span><span class="rule"></span><span class="clock" id="clock">--:--:--</span></div>
     </header>
 
@@ -173,18 +177,24 @@
       <h1 class="mark">K<span class="e">e</span>lly</h1>
 
       <div class="note">
+        <p class="section-head">What we do</p>
         <p>
           Kelly Engineering builds custom AI infrastructure for the essential parts of the American industrial economy: the brokers, distributors, manufacturers, and operators that keep the country running.
         </p>
         <p>
           We embed in their operations and build AI agents that read the documents, check the data, and draft the work. Your people approve it.
         </p>
+
+        <p class="section-head">What we&rsquo;ve done</p>
         <p>
-          Our team has shipped mission-critical infrastructure at Palantir and General Dynamics, put satellites into orbit, run robotics at frontier labs, traded at top quant funds, and pushed ML research at MIT.
+          Our team has shipped mission-critical infrastructure at General Dynamics, put satellites into orbit, and pushed ML research at MIT. We&rsquo;ve built sub-20&nbsp;ms voice inference for NVIDIA at CES, edge VLA robotics for T-Mobile, an AI benchmarking platform for <a href="https://humansignal.com/ai-benchmarks/" rel="noopener noreferrer">HumanSignal</a>, and agentic products for <a href="https://mosaic.so/" rel="noopener noreferrer">Mosaic</a> and <a href="https://www.bluffs.app/" rel="noopener noreferrer">Bluffs</a>&mdash;with engineers from OpenAI, NASA JPL, AWS, and MIT Media Lab.
         </p>
+
+        <p class="section-head">What we stand for</p>
         <p>
           We&rsquo;re named after Kelly Johnson, who built the SR-71 Blackbird at Lockheed&rsquo;s Skunk Works with a small team in a rented circus tent. His motto?<br><em>Be&nbsp;quick, be&nbsp;quiet, be&nbsp;on&nbsp;time.</em>
         </p>
+
         <p class="contact">
           <a href="mailto:engineering@kelly.so">engineering@kelly.so</a>
         </p>
